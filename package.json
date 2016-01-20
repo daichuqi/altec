@@ -18,8 +18,10 @@
   "homepage": "https://github.com/daichuqi/altec#readme",
   "dependencies": {
     "babel": "^6.3.26",
+    "history": "^1.17.0",
     "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react-dom": "^0.14.6",
+    "react-router": "^2.0.0-rc5"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
