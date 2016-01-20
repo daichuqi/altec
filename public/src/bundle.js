@@ -24724,7 +24724,7 @@
 /* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -24754,12 +24754,12 @@
 	  }
 
 	  _createClass(Frontpage, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'this is frontpage'
+	        "div",
+	        { className: "sidecontent" },
+	        "this is frontpage"
 	      );
 	    }
 	  }]);
@@ -24831,7 +24831,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'sidebar-header-logo' },
-	            'LOGO'
+	            _react2.default.createElement('img', { className: 'logo', src: 'images/logo.png' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -24887,7 +24887,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-home' })
 	                ),
 	                'Home'
 	              )
@@ -24901,7 +24901,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-cube' })
 	                ),
 	                'Products'
 	              )
@@ -24915,7 +24915,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-cog' })
 	                ),
 	                'Applications'
 	              )
@@ -24929,7 +24929,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-download' })
 	                ),
 	                'Download'
 	              )
@@ -24943,7 +24943,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-picture-o' })
 	                ),
 	                'Gallery'
 	              )
@@ -24957,7 +24957,7 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                  _react2.default.createElement('i', { className: 'fa fa-envelope' })
 	                ),
 	                'Contact'
 	              )
@@ -24982,7 +24982,7 @@
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -24995,12 +24995,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Contact = _react2.default.createClass({
-	  displayName: 'Contact',
+	  displayName: "Contact",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'contact'
+	      "div",
+	      { className: "sidecontent" },
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "Contact"
+	      )
 	    );
 	  }
 	});
@@ -25011,7 +25015,7 @@
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25024,12 +25028,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Products = _react2.default.createClass({
-	  displayName: 'Products',
+	  displayName: "Products",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'Products'
+	      "div",
+	      { className: "sidecontent" },
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "products"
+	      )
 	    );
 	  }
 	});
@@ -25040,7 +25048,7 @@
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25053,12 +25061,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Gallery = _react2.default.createClass({
-	  displayName: 'Gallery',
+	  displayName: "Gallery",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'Gallery'
+	      "div",
+	      { className: "sidecontent" },
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "Gallery"
+	      )
 	    );
 	  }
 	});
@@ -25069,7 +25081,7 @@
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25082,12 +25094,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Download = _react2.default.createClass({
-	  displayName: 'Download',
+	  displayName: "Download",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'Download'
+	      "div",
+	      { className: "sidecontent" },
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "Download"
+	      )
 	    );
 	  }
 	});
@@ -25098,7 +25114,7 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25111,12 +25127,16 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Applications = _react2.default.createClass({
-	  displayName: 'Applications',
+	  displayName: "Applications",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'h3',
-	      null,
-	      'Applications'
+	      "div",
+	      { className: "sidecontent" },
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "Application"
+	      )
 	    );
 	  }
 	});

@@ -15,12 +15,15 @@ a:link, a:visited,a:hover,a:active  {
     text-decoration: none;
 }
 
+.logo{
+  width: 80%;
+}
 
 .sidebar{
   position: fixed;
   height: 100%;
   width: 250px;
-  background-color: #f6f7f8;
+  background-color: rgba(245, 245, 245, 0.44);
   box-shadow: 0 0 4px 1px #ECECEC;
 }
 
@@ -121,5 +124,9 @@ a:link, a:visited,a:hover,a:active  {
     line-height: 1.6;
     padding: 20px 0;
     background-color: whitesmoke;
+}
+
+.sidecontent {
+    padding-left: 250px;
 }
 

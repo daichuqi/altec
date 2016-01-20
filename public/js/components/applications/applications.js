@@ -2,7 +2,9 @@ import React from 'react'
 
 const Applications = React.createClass({
   render() {
-    return <h3>Applications</h3>
+    return (
+      <div className="sidecontent"><h3>Application</h3></div>
+    )
   }
 })
 

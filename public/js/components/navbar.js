@@ -27,7 +27,7 @@ class Navbar extends React.Component {
       <div className="sidebar">
         <div className="sidebar-header">
           <div className="sidebar-header-logo">
-            LOGO
+            <img className="logo" src="images/logo.png"></img>
           </div>
           <div className="sidebar-header-meta">
             <ul className="sidebar-header-meta-list">
@@ -42,32 +42,32 @@ class Navbar extends React.Component {
           <ul className="sidebar-nav js-one-page-nav js-menu-vertical">
             <li className="addbordertop">
               <Link className="route-link" to="/" style={styles.link}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Home
+                <span className="sidebar-nav-icon"><i className="fa fa-home"></i></span>Home
               </Link>
             </li>
             <li>
               <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Products
+                <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Products
               </Link>
             </li>
             <li>
               <Link className="route-link" to="/applications" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Applications
+                <span className="sidebar-nav-icon"><i className="fa fa-cog"></i></span>Applications
               </Link>
             </li>
             <li>
               <Link className="route-link" to="/download" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Download
+                <span className="sidebar-nav-icon"><i className="fa fa-download"></i></span>Download
               </Link>
             </li>
             <li>
               <Link className="route-link" to="/gallery" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Gallery
+                <span className="sidebar-nav-icon"><i className="fa fa-picture-o"></i></span>Gallery
               </Link>
             </li>
             <li>
               <Link className="route-link" to="/contact" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Contact
+                <span className="sidebar-nav-icon"><i className="fa fa-envelope"></i></span>Contact
               </Link>
             </li>
           </ul>

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contact = React.createClass({
   render() {
-    return <h3>contact</h3>
+    return (
+      <div className="sidecontent"><h3>Contact</h3></div>
+    )
   }
 })
 

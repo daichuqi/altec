@@ -2,7 +2,9 @@ import React from 'react'
 
 const Gallery = React.createClass({
   render() {
-    return <h3>Gallery</h3>
+    return (
+      <div className="sidecontent"><h3>Gallery</h3></div>
+    )
   }
 })
 
