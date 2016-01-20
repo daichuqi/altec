@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: Robot;
+    line-height: 100%;
+}
+
+ol, ul {
+    padding: 0;
+    line-height: 1.8;
+}
+
+a:link, a:visited,a:hover,a:active  {
+    text-decoration: none;
+}
+
+
+.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  background-color: #f6f7f8;
+  box-shadow: 0 0 4px 1px #ECECEC;
+}
+
+.sidebar-header{
+  background-color: #fff;
+}
+
+.sidebar-header-logo{
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 35px;
+  line-height: 39px;
+  font-weight: 300;
+}
+.sidebar-header-meta{
+  padding: 15px 0;
+  border-top: 1px solid #eaedf1;
+}
+
+.sidebar-header-meta-list{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: .75em;
+  text-align: center;
+}
+
+.sidebar-header-meta-list li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    line-height: 20px;
+    margin: 0 10px;
+}
+
+.sidebar-header-meta-list-icon{
+  color: #99a3b1;
+  margin-right: 6px;
+}
+
+.no-padding{
+  padding-right:0px;
+  padding-left:0px;
+}
+
+.sidebar-nav li, .sidebar-nav-wrapper {
+    border-bottom: 1px solid #dae0e7;
+}
+
+.sidebar-nav-wrapper {
+    position: absolute;
+    top: 150px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.sidebar-nav-icon {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    width: 12px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.route-link:hover{
+  color: #28c;
+}
+
+.route-link{
+  font-size: 13px;
+  color: #4e5154;
+}
+
+
+.sidebar-nav {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-weight: 300;
+}
+
+.addbordertop {
+  border-top: 1px solid #dae0e7;
+}
+
+.sidebar-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    color: #808488;
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px 0;
+    background-color: whitesmoke;
+}
+

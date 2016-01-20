@@ -5,40 +5,77 @@ const dark = 'hsl(200, 20%, 20%)'
 const light = '#fff'
 const styles = {}
 
-styles.wrapper = {
-  padding: '10px 20px',
-  overflow: 'hidden',
-  background: dark,
-  color: light
-}
-
 styles.link = {
-  padding: 11,
-  color: light,
-  fontWeight: 200
+  display: "block",
+  padding: "10px 20px",
+  position: "relative",
+  transition: "color .25s ease",
 }
 
 styles.activeLink = {
-  padding: 11,
-  fontWeight: 200,
-  background: light,
-  color: dark
+  color: "#28c"
 }
 
 
 class Navbar extends React.Component {
-
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div style={styles.wrapper}>
-      <div>LINK!!!</div>
-        <Link to="/" style={styles.link}>Home</Link>
-        <Link to="/products" style={styles.link} activeStyle={styles.activeLink}>Product</Link>
-        <Link to="/contact" style={styles.link} activeStyle={styles.activeLink}>Contact</Link>
+      <div className="sidebar">
+        <div className="sidebar-header">
+          <div className="sidebar-header-logo">
+            LOGO
+          </div>
+          <div className="sidebar-header-meta">
+            <ul className="sidebar-header-meta-list">
+            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Website</a></li>
+            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Github</a></li>
+            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="sidebar-nav-wrapper js-custom-scrollbar">
+          <ul className="sidebar-nav js-one-page-nav js-menu-vertical">
+            <li className="addbordertop">
+              <Link className="route-link" to="/" style={styles.link}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Home
+              </Link>
+            </li>
+            <li>
+              <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Products
+              </Link>
+            </li>
+            <li>
+              <Link className="route-link" to="/applications" style={styles.link} activeStyle={styles.activeLink}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Applications
+              </Link>
+            </li>
+            <li>
+              <Link className="route-link" to="/download" style={styles.link} activeStyle={styles.activeLink}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Download
+              </Link>
+            </li>
+            <li>
+              <Link className="route-link" to="/gallery" style={styles.link} activeStyle={styles.activeLink}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Gallery
+              </Link>
+            </li>
+            <li>
+              <Link className="route-link" to="/contact" style={styles.link} activeStyle={styles.activeLink}>
+                <span className="sidebar-nav-icon"><i className="fa fa-thumbs-o-up"></i></span>Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="sidebar-footer">
+          ALTEC
+        </div>
       </div>
     )
   }

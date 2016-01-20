@@ -63,9 +63,9 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _App = __webpack_require__(218);
+	var _layout = __webpack_require__(218);
 
-	var _App2 = _interopRequireDefault(_App);
+	var _layout2 = _interopRequireDefault(_layout);
 
 	var _contact = __webpack_require__(221);
 
@@ -74,6 +74,18 @@
 	var _products = __webpack_require__(222);
 
 	var _products2 = _interopRequireDefault(_products);
+
+	var _gallery = __webpack_require__(223);
+
+	var _gallery2 = _interopRequireDefault(_gallery);
+
+	var _download = __webpack_require__(224);
+
+	var _download2 = _interopRequireDefault(_download);
+
+	var _applications = __webpack_require__(225);
+
+	var _applications2 = _interopRequireDefault(_applications);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84,8 +96,11 @@
 	  { history: _reactRouter.browserHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: '/', component: _App2.default },
+	    { path: '/', component: _layout2.default },
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'applications', component: _applications2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'download', component: _download2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'gallery', component: _gallery2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _contact2.default })
 	  )
 	), mountNode);
@@ -24675,16 +24690,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
+	var Layout = function (_React$Component) {
+	  _inherits(Layout, _React$Component);
 
-	  function App() {
-	    _classCallCheck(this, App);
+	  function Layout() {
+	    _classCallCheck(this, Layout);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Layout).apply(this, arguments));
 	  }
 
-	  _createClass(App, [{
+	  _createClass(Layout, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -24700,10 +24715,10 @@
 	    }
 	  }]);
 
-	  return App;
+	  return Layout;
 	}(_react2.default.Component);
 
-	exports.default = App;
+	exports.default = Layout;
 
 /***/ },
 /* 219 */
@@ -24784,24 +24799,15 @@
 	var light = '#fff';
 	var styles = {};
 
-	styles.wrapper = {
-	  padding: '10px 20px',
-	  overflow: 'hidden',
-	  background: dark,
-	  color: light
-	};
-
 	styles.link = {
-	  padding: 11,
-	  color: light,
-	  fontWeight: 200
+	  display: "block",
+	  padding: "10px 20px",
+	  position: "relative",
+	  transition: "color .25s ease"
 	};
 
 	styles.activeLink = {
-	  padding: 11,
-	  fontWeight: 200,
-	  background: light,
-	  color: dark
+	  color: "#28c"
 	};
 
 	var Navbar = function (_React$Component) {
@@ -24818,26 +24824,150 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { style: styles.wrapper },
+	        { className: 'sidebar' },
 	        _react2.default.createElement(
 	          'div',
-	          null,
-	          'LINK!!!'
+	          { className: 'sidebar-header' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'sidebar-header-logo' },
+	            'LOGO'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'sidebar-header-meta' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'sidebar-header-meta-list' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#' },
+	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
+	                  'Website'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#' },
+	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
+	                  'Github'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#' },
+	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
+	                  'Support'
+	                )
+	              )
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/', style: styles.link },
-	          'Home'
+	          'div',
+	          { className: 'sidebar-nav-wrapper js-custom-scrollbar' },
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'sidebar-nav js-one-page-nav js-menu-vertical' },
+	            _react2.default.createElement(
+	              'li',
+	              { className: 'addbordertop' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/', style: styles.link },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Home'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Products'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/applications', style: styles.link, activeStyle: styles.activeLink },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Applications'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/download', style: styles.link, activeStyle: styles.activeLink },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Download'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/gallery', style: styles.link, activeStyle: styles.activeLink },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Gallery'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'route-link', to: '/contact', style: styles.link, activeStyle: styles.activeLink },
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sidebar-nav-icon' },
+	                  _react2.default.createElement('i', { className: 'fa fa-thumbs-o-up' })
+	                ),
+	                'Contact'
+	              )
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/products', style: styles.link, activeStyle: styles.activeLink },
-	          'Product'
-	        ),
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/contact', style: styles.link, activeStyle: styles.activeLink },
-	          'Contact'
+	          'div',
+	          { className: 'sidebar-footer' },
+	          'ALTEC'
 	        )
 	      );
 	    }
@@ -24905,6 +25035,93 @@
 	});
 
 	exports.default = Products;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Gallery = _react2.default.createClass({
+	  displayName: 'Gallery',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h3',
+	      null,
+	      'Gallery'
+	    );
+	  }
+	});
+
+	exports.default = Gallery;
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Download = _react2.default.createClass({
+	  displayName: 'Download',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h3',
+	      null,
+	      'Download'
+	    );
+	  }
+	});
+
+	exports.default = Download;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Applications = _react2.default.createClass({
+	  displayName: 'Applications',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'h3',
+	      null,
+	      'Applications'
+	    );
+	  }
+	});
+
+	exports.default = Applications;
 
 /***/ }
 /******/ ]);
