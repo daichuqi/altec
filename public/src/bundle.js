@@ -24843,14 +24843,17 @@
 	};
 
 	var listChecker = false;
+
 	var openList = function openList() {
-	  console.log('list click');
-	  console.log(listChecker);
 	  if (listChecker) {
 	    listChecker = false;
 	  } else {
 	    listChecker = true;
 	  }
+	};
+
+	var closeList = function closeList() {
+	  listChecker = false;
 	};
 
 	var navArray = [{
@@ -24901,7 +24904,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'li',
-	        { key: 'Product List', onClick: openList },
+	        { onClick: openList },
 	        _react2.default.createElement(
 	          _reactRouter.Link,
 	          { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
@@ -24926,11 +24929,11 @@
 
 	var navList = navArray.map(function (navItem) {
 	  if (navItem.name === "Product List") {
-	    return _react2.default.createElement(ProductNav, null);
+	    return _react2.default.createElement(ProductNav, { key: 'Product List' });
 	  } else {
 	    return _react2.default.createElement(
 	      'li',
-	      { key: navItem.name },
+	      { key: navItem.name, onClick: closeList },
 	      _react2.default.createElement(
 	        _reactRouter.Link,
 	        { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
@@ -25090,7 +25093,7 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Products).call(this, props));
 
 	    _this.state = {
-	      products: [{ name: "al808", id: "1" }, { name: "tc818", id: "2" }]
+	      products: [{ name: "al808", id: 1 }, { name: "tc818", id: 2 }]
 	    };
 	    return _this;
 	  }
@@ -25167,7 +25170,7 @@
 
 	  return _react2.default.createElement(
 	    'ul',
-	    { className: 'col-md-10' },
+	    { className: 'col-md-12' },
 	    productItems
 	  );
 	};
@@ -25203,7 +25206,7 @@
 	  }
 	  return _react2.default.createElement(
 	    "div",
-	    { className: "col-md-3" },
+	    { className: "col-md-12" },
 	    product.name
 	  );
 	};

@@ -27,7 +27,7 @@ class Products extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      products:[{name:"al808",id:"1"},{name:"tc818",id:"2"}]
+      products:[{name:"al808",id:1},{name:"tc818",id:2}]
     };
   }
 

@@ -6,8 +6,8 @@ const ProductListItem = ({product}) =>{
     return <div>Loading...</div>
   }
   return (
-    <div className="col-md-3">
-    {product.name}
+    <div className="col-md-12">
+      {product.name}
     </div>
   )
 }

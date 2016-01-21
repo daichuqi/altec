@@ -149,14 +149,14 @@ a:link, a:visited,a:hover,a:active  {
 
 .closeList{
   height: 0;
-  transition: height 1s;
+  transition: height 0.6s;
   background-color:whitesmoke ;
   padding-left: 25px;
   padding-top: 5px;
 }
 
 .openList{
-  transition: height 1s;
+  transition: height 0.6s;
   height: 135px;
   background-color:whitesmoke ;
   padding-left: 25px;

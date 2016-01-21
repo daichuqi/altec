@@ -18,14 +18,17 @@ styles.activeLink = {
 
 
 var listChecker = false;
+
 var openList = function(){
-  console.log('list click');
-  console.log(listChecker);
   if(listChecker){
     listChecker = false
   }else{
     listChecker = true
   }
+}
+
+var closeList = function(){
+    listChecker = false;
 }
 
 var navArray = [{
@@ -70,7 +73,7 @@ class ProductNav extends React.Component{
   }
   render(){
     return(
-      <li key="Product List" onClick={openList}>
+      <li onClick={openList}>
         <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
           <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
         </Link>
@@ -84,10 +87,10 @@ class ProductNav extends React.Component{
 
 const navList = navArray.map((navItem)=>{
   if(navItem.name === "Product List"){
-    return <ProductNav />
+    return <ProductNav key="Product List"/>
   }else{
     return (
-    <li key={navItem.name}>
+    <li key={navItem.name} onClick={closeList}>
       <Link className="route-link" to={navItem.to} style={styles.link} activeStyle={navItem.active}>
         <span className="sidebar-nav-icon"><i className={navItem.favicon}></i></span>{navItem.name}
       </Link>

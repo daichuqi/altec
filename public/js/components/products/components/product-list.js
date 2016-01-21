@@ -9,7 +9,7 @@ const ProductList = (props) => {
   });
 
   return(
-    <ul className="col-md-10">
+    <ul className="col-md-12">
       {productItems}
     </ul>
   );
