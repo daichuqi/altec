@@ -67,21 +67,21 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _contact = __webpack_require__(225);
+	var _contact = __webpack_require__(226);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
 	var _products = __webpack_require__(221);
 
-	var _gallery = __webpack_require__(226);
+	var _gallery = __webpack_require__(227);
 
 	var _gallery2 = _interopRequireDefault(_gallery);
 
-	var _download = __webpack_require__(227);
+	var _download = __webpack_require__(228);
 
 	var _download2 = _interopRequireDefault(_download);
 
-	var _applications = __webpack_require__(228);
+	var _applications = __webpack_require__(229);
 
 	var _applications2 = _interopRequireDefault(_applications);
 
@@ -24820,6 +24820,8 @@
 
 	var _products = __webpack_require__(221);
 
+	var _dataStorage = __webpack_require__(225);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24828,22 +24830,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var styles = {};
-	styles.link = {
-	  display: "block",
-	  padding: "10px 25px",
-	  position: "relative",
-	  transition: "color .25s ease",
-	  transition: "left 0.5s ease, width 0.5s ease"
-	};
-	styles.activeLink = {
-	  color: "#28c",
-	  width: '244px',
-	  left: '6px'
-	};
-
 	var listChecker = false;
-
 	var openList = function openList() {
 	  if (listChecker) {
 	    listChecker = false;
@@ -24851,44 +24838,9 @@
 	    listChecker = true;
 	  }
 	};
-
 	var closeList = function closeList() {
 	  listChecker = false;
 	};
-
-	var navArray = [{
-	  name: "Home",
-	  to: "/",
-	  favicon: "fa fa-home",
-	  top: "addbordertop"
-	}, {
-	  name: "Product List",
-	  to: "/products",
-	  favicon: "fa fa-cube",
-	  active: styles.activeLink,
-	  onclick: openList,
-	  open: false
-	}, {
-	  name: "Applications",
-	  to: "/applications",
-	  favicon: "fa fa-cog",
-	  active: styles.activeLink
-	}, {
-	  name: "Manual Download",
-	  to: "/download",
-	  favicon: "fa fa-download",
-	  active: styles.activeLink
-	}, {
-	  name: "Gallery",
-	  to: "/gallery",
-	  favicon: "fa fa-picture-o",
-	  active: styles.activeLink
-	}, {
-	  name: "Contact Us",
-	  to: "/contact",
-	  favicon: "fa fa-envelope",
-	  active: styles.activeLink
-	}];
 
 	var ProductNav = function (_React$Component) {
 	  _inherits(ProductNav, _React$Component);
@@ -24907,7 +24859,7 @@
 	        { onClick: openList },
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
+	          { className: 'route-link', to: '/products', style: _dataStorage.styles.link, activeStyle: _dataStorage.styles.activeLink },
 	          _react2.default.createElement(
 	            'span',
 	            { className: 'sidebar-nav-icon' },
@@ -24927,7 +24879,7 @@
 	  return ProductNav;
 	}(_react2.default.Component);
 
-	var navList = navArray.map(function (navItem) {
+	var navList = _dataStorage.navArray.map(function (navItem) {
 	  if (navItem.name === "Product List") {
 	    return _react2.default.createElement(ProductNav, { key: 'Product List' });
 	  } else {
@@ -24936,7 +24888,7 @@
 	      { key: navItem.name, onClick: closeList },
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
+	        { className: 'route-link', to: navItem.to, style: _dataStorage.styles.link, activeStyle: navItem.active },
 	        _react2.default.createElement(
 	          'span',
 	          { className: 'sidebar-nav-icon' },
@@ -25232,6 +25184,62 @@
 
 /***/ },
 /* 225 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var styles = exports.styles = {
+	  link: {
+	    display: "block",
+	    padding: "10px 25px",
+	    position: "relative",
+	    transition: "color .25s ease",
+	    transition: "left 0.5s ease, width 0.5s ease"
+	  },
+	  activeLink: {
+	    color: "#28c",
+	    width: '244px',
+	    left: '6px'
+	  }
+	};
+
+	var navArray = exports.navArray = [{
+	  name: "Home",
+	  to: "/",
+	  favicon: "fa fa-home",
+	  top: "addbordertop"
+	}, {
+	  name: "Product List",
+	  to: "/products",
+	  favicon: "fa fa-cube",
+	  active: styles.activeLink
+	}, {
+	  name: "Applications",
+	  to: "/applications",
+	  favicon: "fa fa-cog",
+	  active: styles.activeLink
+	}, {
+	  name: "Manual Download",
+	  to: "/download",
+	  favicon: "fa fa-download",
+	  active: styles.activeLink
+	}, {
+	  name: "Gallery",
+	  to: "/gallery",
+	  favicon: "fa fa-picture-o",
+	  active: styles.activeLink
+	}, {
+	  name: "Contact Us",
+	  to: "/contact",
+	  favicon: "fa fa-envelope",
+	  active: styles.activeLink
+	}];
+
+/***/ },
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25260,7 +25268,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25289,7 +25297,7 @@
 	exports.default = Gallery;
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25318,7 +25326,7 @@
 	exports.default = Download;
 
 /***/ },
-/* 228 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -1,24 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router'
 import {CategoryList} from './products/products'
-
-const styles = {};
-styles.link = {
-  display: "block",
-  padding: "10px 25px",
-  position: "relative",
-  transition: "color .25s ease",
-  transition: "left 0.5s ease, width 0.5s ease",
-}
-styles.activeLink = {
-  color: "#28c",
-  width: '244px',
-  left:'6px'
-}
-
+import {navArray,styles} from './data-storage'
 
 var listChecker = false;
-
 var openList = function(){
   if(listChecker){
     listChecker = false
@@ -26,46 +11,9 @@ var openList = function(){
     listChecker = true
   }
 }
-
 var closeList = function(){
     listChecker = false;
 }
-
-var navArray = [{
-  name:"Home",
-  to:"/",
-  favicon:"fa fa-home",
-  top:"addbordertop",
-},{
-  name:"Product List",
-  to:"/products",
-  favicon:"fa fa-cube",
-  active:styles.activeLink,
-  onclick:openList,
-  open:false
-},{
-  name:"Applications",
-  to:"/applications",
-  favicon:"fa fa-cog",
-  active:styles.activeLink
-},{
-  name:"Manual Download",
-  to:"/download",
-  favicon:"fa fa-download",
-  active:styles.activeLink
-},{
-  name:"Gallery",
-  to:"/gallery",
-  favicon:"fa fa-picture-o",
-  active:styles.activeLink
-},{
-  name:"Contact Us",
-  to:"/contact",
-  favicon:"fa fa-envelope",
-  active:styles.activeLink
-}];
-
-
 
 class ProductNav extends React.Component{
   constructor(props) {
