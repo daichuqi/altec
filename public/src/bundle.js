@@ -24904,7 +24904,7 @@
 	        { key: 'Product List', onClick: openList },
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
+	          { className: 'route-link addborderbottom', to: '/products', style: styles.link, activeStyle: styles.activeLink },
 	          _react2.default.createElement(
 	            'span',
 	            { className: 'sidebar-nav-icon' },
@@ -24914,7 +24914,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: listChecker ? "openList" : "closeList" },
+	          { className: listChecker ? "openList NavPdList" : "closeList NavPdList" },
 	          _products.CategoryList
 	        )
 	      );

@@ -1,27 +1,21 @@
-
 body, html {
     height: 100%;
     margin: 0!important;
 }
-
 body, h1, h2, h3, h4, h5, h6 {
     font-family: Robot;
     line-height: 100%;
 }
-
 ol, ul {
     padding: 0;
     line-height: 1.8;
 }
-
 a:link, a:visited,a:hover,a:active  {
     text-decoration: none;
 }
-
 .logo{
   width: 60%;
 }
-
 
 /*========= NavBar =============*/
 
@@ -123,6 +117,10 @@ a:link, a:visited,a:hover,a:active  {
 .addbordertop {
   border-top: 1px solid #dae0e7;
 }
+.addborderbottom{
+  border-bottom: 1px solid #dae0e7;
+}
+
 
 .sidebar-footer {
     position: absolute;
@@ -146,16 +144,21 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .NavPdList{
-  line-height: 1.2;
+  line-height: 1.8;
 }
 
 .closeList{
-  display: none;
+  height: 0;
+  transition: height 1s;
+  background-color:whitesmoke ;
+  padding-left: 25px;
 }
 
 .openList{
+  transition: height 1s;
+  height: 170px;
   background-color:whitesmoke ;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 /*========= FrontPage =============*/
