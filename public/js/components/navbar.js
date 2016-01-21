@@ -71,7 +71,7 @@ class ProductNav extends React.Component{
   render(){
     return(
       <li key="Product List" onClick={openList}>
-        <Link className="route-link addborderbottom" to="/products" style={styles.link} activeStyle={styles.activeLink}>
+        <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
           <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
         </Link>
         <div className={listChecker ? "openList NavPdList" : "closeList NavPdList"}>
@@ -87,7 +87,7 @@ const navList = navArray.map((navItem)=>{
     return <ProductNav />
   }else{
     return (
-    <li className={navItem.top} key={navItem.name}>
+    <li key={navItem.name}>
       <Link className="route-link" to={navItem.to} style={styles.link} activeStyle={navItem.active}>
         <span className="sidebar-nav-icon"><i className={navItem.favicon}></i></span>{navItem.name}
       </Link>

@@ -32,7 +32,7 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .sidebar-header-logo{
-  text-align: left;
+  text-align: center;
   padding: 30px 20px;
   font-size: 35px;
   line-height: 39px;
@@ -69,8 +69,8 @@ a:link, a:visited,a:hover,a:active  {
   padding-left:0px;
 }
 
-.sidebar-nav li, .sidebar-nav-wrapper {
-    border-bottom: 1px solid #dae0e7;
+.sidebar-nav-wrapper {
+  border-bottom: 1px solid #dae0e7;
 }
 
 .sidebar-nav-wrapper {
@@ -92,6 +92,7 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .route-link{
+  border-bottom: 1px solid #dae0e7;
   width: 250px;
   left:0;
   background-color: #F8F8F8;
@@ -121,7 +122,6 @@ a:link, a:visited,a:hover,a:active  {
   border-bottom: 1px solid #dae0e7;
 }
 
-
 .sidebar-footer {
     position: absolute;
     left: 0;
@@ -144,7 +144,7 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .NavPdList{
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .closeList{
@@ -152,13 +152,16 @@ a:link, a:visited,a:hover,a:active  {
   transition: height 1s;
   background-color:whitesmoke ;
   padding-left: 25px;
+  padding-top: 5px;
 }
 
 .openList{
   transition: height 1s;
-  height: 170px;
+  height: 135px;
   background-color:whitesmoke ;
   padding-left: 25px;
+  padding-top: 5px;
+  border-bottom: 1px solid #dae0e7;
 }
 
 /*========= FrontPage =============*/
@@ -180,9 +183,6 @@ a:link, a:visited,a:hover,a:active  {
   margin-right: auto;
   width: 250px;
   margin-top: 15px;
-
-}
-.fp_al808{
 
 }
 
