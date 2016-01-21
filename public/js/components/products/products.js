@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{Component} from 'react'
+import ProductList from './components/product-list'
 
 const category = [{
   name:"Temperature Controllers"
@@ -22,7 +23,14 @@ const CategoryList = category.map((item)=>{
     )
 });
 
-const Products = React.createClass({
+class Products extends Component{
+  constructor(props) {
+    super(props)
+    this.state = {
+      products:[{name:"al808",id:"1"},{name:"tc818",id:"2"}]
+    };
+  }
+
   render() {
     return (
       <div>
@@ -31,10 +39,11 @@ const Products = React.createClass({
           <div className="pd-title-text">AND TECHOLOGY<span className="pd-title-span"> INNOVATION</span></div>
         </div>
         <div className="pd-category">
+          <ProductList products={this.state.products}/>
         </div>
       </div>
     )
   }
-})
+}
 
 export {Products,CategoryList}

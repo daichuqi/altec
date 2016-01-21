@@ -67,21 +67,21 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _contact = __webpack_require__(222);
+	var _contact = __webpack_require__(224);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
 	var _products = __webpack_require__(221);
 
-	var _gallery = __webpack_require__(223);
+	var _gallery = __webpack_require__(225);
 
 	var _gallery2 = _interopRequireDefault(_gallery);
 
-	var _download = __webpack_require__(224);
+	var _download = __webpack_require__(226);
 
 	var _download2 = _interopRequireDefault(_download);
 
-	var _applications = __webpack_require__(225);
+	var _applications = __webpack_require__(227);
 
 	var _applications2 = _interopRequireDefault(_applications);
 
@@ -24904,7 +24904,7 @@
 	        { key: 'Product List', onClick: openList },
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { className: 'route-link addborderbottom', to: '/products', style: styles.link, activeStyle: styles.activeLink },
+	          { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
 	          _react2.default.createElement(
 	            'span',
 	            { className: 'sidebar-nav-icon' },
@@ -24930,7 +24930,7 @@
 	  } else {
 	    return _react2.default.createElement(
 	      'li',
-	      { className: navItem.top, key: navItem.name },
+	      { key: navItem.name },
 	      _react2.default.createElement(
 	        _reactRouter.Link,
 	        { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
@@ -25034,7 +25034,9 @@
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25045,7 +25047,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _productList = __webpack_require__(222);
+
+	var _productList2 = _interopRequireDefault(_productList);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var category = [{
 	  name: "Temperature Controllers"
@@ -25063,52 +25075,142 @@
 
 	var CategoryList = category.map(function (item) {
 	  return _react2.default.createElement(
-	    "div",
+	    'div',
 	    { key: item.name },
 	    item.name
 	  );
 	});
 
-	var Products = _react2.default.createClass({
-	  displayName: "Products",
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "div",
-	      null,
-	      _react2.default.createElement(
-	        "div",
-	        { className: "pd-title" },
+	var Products = function (_Component) {
+	  _inherits(Products, _Component);
+
+	  function Products(props) {
+	    _classCallCheck(this, Products);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Products).call(this, props));
+
+	    _this.state = {
+	      products: [{ name: "al808", id: "1" }, { name: "tc818", id: "2" }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Products, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "pd-title-text" },
-	          "CULTURE OF PRODUCT",
+	          'div',
+	          { className: 'pd-title' },
 	          _react2.default.createElement(
-	            "span",
-	            { className: "pd-title-span" },
-	            " EXCELLENCE"
+	            'div',
+	            { className: 'pd-title-text' },
+	            'CULTURE OF PRODUCT',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'pd-title-span' },
+	              ' EXCELLENCE'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'pd-title-text' },
+	            'AND TECHOLOGY',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'pd-title-span' },
+	              ' INNOVATION'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "pd-title-text" },
-	          "AND TECHOLOGY",
-	          _react2.default.createElement(
-	            "span",
-	            { className: "pd-title-span" },
-	            " INNOVATION"
-	          )
+	          'div',
+	          { className: 'pd-category' },
+	          _react2.default.createElement(_productList2.default, { products: this.state.products })
 	        )
-	      ),
-	      _react2.default.createElement("div", { className: "pd-category" })
-	    );
-	  }
-	});
+	      );
+	    }
+	  }]);
+
+	  return Products;
+	}(_react.Component);
 
 	exports.Products = Products;
 	exports.CategoryList = CategoryList;
 
 /***/ },
 /* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _productListItem = __webpack_require__(223);
+
+	var _productListItem2 = _interopRequireDefault(_productListItem);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProductList = function ProductList(props) {
+	  var productItems = props.products.map(function (product) {
+	    return _react2.default.createElement(_productListItem2.default, { key: product.id, product: product });
+	  });
+
+	  return _react2.default.createElement(
+	    'ul',
+	    { className: 'col-md-10' },
+	    productItems
+	  );
+	};
+
+	exports.default = ProductList;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var ProductListItem = function ProductListItem(_ref) {
+	  var product = _ref.product;
+
+	  var productId = product.id;
+	  if (!product) {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      "Loading..."
+	    );
+	  }
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "col-md-3" },
+	    product.name
+	  );
+	};
+	exports.default = ProductListItem;
+
+/***/ },
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25137,7 +25239,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 223 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25166,7 +25268,7 @@
 	exports.default = Gallery;
 
 /***/ },
-/* 224 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25195,7 +25297,7 @@
 	exports.default = Download;
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
