@@ -1,7 +1,3 @@
-export const test = {
-  "name":"abc"
-}
-
 export const category = [{
   name:"Temperature Controllers"
 },{
@@ -15,3 +11,4 @@ export const category = [{
 },{
   name:"PH/ORP Controllers"
 }]
+

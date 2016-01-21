@@ -1,5 +1,5 @@
 import React from 'react'
-import {test} from './product-data'
+import {Row,Col} from 'react-bootstrap'
 
 const ProductListItem = ({product}) =>{
   const productId = product.id;
@@ -7,9 +7,14 @@ const ProductListItem = ({product}) =>{
     return <div>Loading...</div>
   }
   return (
-    <div className="col-md-12">
-      {product.name}{test.name}
-    </div>
+    <Row className="show-grid">
+      <Col xs={12} md={4}>
+        <img src="./images/logo.png" />
+      </Col>
+      <Col xs={12} md={8}>
+        <div>hello</div>
+      </Col>
+    </Row>
   )
 }
 export default ProductListItem

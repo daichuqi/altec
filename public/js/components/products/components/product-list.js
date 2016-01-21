@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductListItem from './product-list-item';
+import {Grid} from 'react-bootstrap'
 
 const ProductList = (props) => {
   const productItems = props.products.map((product)=>{
@@ -9,9 +10,9 @@ const ProductList = (props) => {
   });
 
   return(
-    <ul className="col-md-12">
+    <Grid>
       {productItems}
-    </ul>
+    </Grid>
   );
 };
 
