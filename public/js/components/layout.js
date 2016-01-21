@@ -7,7 +7,7 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Navbar />
-        <div style={{ padding: 20 }}>
+        <div className="sidecontent">
           {this.props.children || <Frontpage />}
         </div>
       </div>

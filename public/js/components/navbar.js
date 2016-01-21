@@ -74,7 +74,7 @@ class Navbar extends React.Component {
         </div>
 
         <div className="sidebar-footer">
-          ALTEC
+          Shenzhen ALTEC Electronics Co., Ltd.
         </div>
       </div>
     )

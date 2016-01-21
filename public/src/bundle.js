@@ -24708,7 +24708,7 @@
 	        _react2.default.createElement(_navbar2.default, null),
 	        _react2.default.createElement(
 	          'div',
-	          { style: { padding: 20 } },
+	          { className: 'sidecontent' },
 	          this.props.children || _react2.default.createElement(_frontpage2.default, null)
 	        )
 	      );
@@ -24758,8 +24758,41 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "sidecontent" },
-	        "this is frontpage"
+	        { className: "fp" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "fp_shadow fp_title" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "fp_title_text_white" },
+	            "Offering wide"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "fp_title_text_white" },
+	            "range of"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "fp_title_text_blue" },
+	            "Precision industrial"
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "fp_title_text_blue" },
+	            "controllers"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "fp_img" },
+	          _react2.default.createElement("img", { className: "fp_al808", src: "images/fp_al808.png" }),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "fp_img_text" },
+	            "AL808 Temperature Controller Series"
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -24967,7 +25000,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'sidebar-footer' },
-	          'ALTEC'
+	          'Shenzhen ALTEC Electronics Co., Ltd.'
 	        )
 	      );
 	    }
@@ -24982,7 +25015,7 @@
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -24995,16 +25028,12 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Contact = _react2.default.createClass({
-	  displayName: "Contact",
+	  displayName: 'Contact',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "sidecontent" },
-	      _react2.default.createElement(
-	        "h3",
-	        null,
-	        "Contact"
-	      )
+	      'div',
+	      null,
+	      'Contact'
 	    );
 	  }
 	});
@@ -25015,7 +25044,7 @@
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25028,16 +25057,12 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Products = _react2.default.createClass({
-	  displayName: "Products",
+	  displayName: 'Products',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "sidecontent" },
-	      _react2.default.createElement(
-	        "h3",
-	        null,
-	        "products"
-	      )
+	      'div',
+	      null,
+	      'products'
 	    );
 	  }
 	});
@@ -25048,7 +25073,7 @@
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25061,16 +25086,12 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Gallery = _react2.default.createClass({
-	  displayName: "Gallery",
+	  displayName: 'Gallery',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "sidecontent" },
-	      _react2.default.createElement(
-	        "h3",
-	        null,
-	        "Gallery"
-	      )
+	      'div',
+	      null,
+	      'Gallery'
 	    );
 	  }
 	});
@@ -25081,7 +25102,7 @@
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25094,16 +25115,12 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Download = _react2.default.createClass({
-	  displayName: "Download",
+	  displayName: 'Download',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "sidecontent" },
-	      _react2.default.createElement(
-	        "h3",
-	        null,
-	        "Download"
-	      )
+	      'div',
+	      null,
+	      'Download'
 	    );
 	  }
 	});
@@ -25114,7 +25131,7 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25127,16 +25144,12 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Applications = _react2.default.createClass({
-	  displayName: "Applications",
+	  displayName: 'Applications',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "sidecontent" },
-	      _react2.default.createElement(
-	        "h3",
-	        null,
-	        "Application"
-	      )
+	      'div',
+	      null,
+	      'Application'
 	    );
 	  }
 	});

@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400&subset=latin,cyrillic-ext,cyrillic,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic,latin-ext);
 
+body, html {
+    height: 100%;
+    margin: 0!important;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
     font-family: Robot;
     line-height: 100%;
@@ -16,7 +21,7 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .logo{
-  width: 80%;
+  width: 60%;
 }
 
 .sidebar{
@@ -25,6 +30,7 @@ a:link, a:visited,a:hover,a:active  {
   width: 250px;
   background-color: rgba(245, 245, 245, 0.44);
   box-shadow: 0 0 4px 1px #ECECEC;
+  z-index: 5;
 }
 
 .sidebar-header{
@@ -128,5 +134,59 @@ a:link, a:visited,a:hover,a:active  {
 
 .sidecontent {
     padding-left: 250px;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
 }
+
+
+.fp{
+    background: url(../images/white-bkgrnd-sm.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.fp_img{
+  padding-top: 25%;
+  padding-left: 37%;
+}
+.fp_img_text{
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  margin-top: 15px;
+
+}
+.fp_al808{
+
+}
+
+.fp_title {
+    position: absolute;
+    top: 20%;
+    left: 26%;
+}
+.fp_title_text_white {
+    line-height: 1;
+    font-size: 40px;
+    margin: 5px;
+    color: #0B2956;
+    text-transform: uppercase;
+}
+
+.fp_title_text_blue{
+    line-height: 1;
+    font-size: 40px;
+    margin: 5px;
+    color: #22A0FF;
+    text-transform: uppercase;
+}
+.fp_shadow{
+  text-shadow: 1px 1px 14px rgba(131, 136, 152, 1);
+}
+
+
+
 

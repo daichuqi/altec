@@ -10,6 +10,8 @@ server.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
+server.use('/images', express.static(path.join(__dirname, '/public/images')));
+
 server.listen(PORT, function () {
   console.log('Example app listening on port '+ PORT);
 });
