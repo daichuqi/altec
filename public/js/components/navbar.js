@@ -2,33 +2,6 @@ import React from 'react'
 import { Link } from 'react-router'
 
 const styles = {};
-const navArray = [{
-  name:"Home",
-  to:"/",
-  favicon:"fa fa-home",
-  top:"addbordertop"
-},{
-  name:"Product List",
-  to:"/products",
-  favicon:"fa fa-cube"
-},{
-  name:"Applications",
-  to:"/applications",
-  favicon:"fa fa-cog"
-},{
-  name:"Manual Download",
-  to:"/",
-  favicon:"fa fa-download"
-},{
-  name:"Gallery",
-  to:"/gallery",
-  favicon:"fa fa-picture-o"
-},{
-  name:"Contact Us",
-  to:"/contact",
-  favicon:"fa fa-envelope"
-}];
-
 styles.link = {
   display: "block",
   padding: "10px 25px",
@@ -36,19 +9,50 @@ styles.link = {
   transition: "color .25s ease",
   transition: "left 0.5s ease, width 0.5s ease",
 }
-
-
 styles.activeLink = {
   color: "#28c",
   width: '244px',
   left:'6px'
 }
 
+const navArray = [{
+  name:"Home",
+  to:"/",
+  favicon:"fa fa-home",
+  top:"addbordertop",
+},{
+  name:"Product List",
+  to:"/products",
+  favicon:"fa fa-cube",
+  active:styles.activeLink
+},{
+  name:"Applications",
+  to:"/applications",
+  favicon:"fa fa-cog",
+  active:styles.activeLink
+},{
+  name:"Manual Download",
+  to:"/download",
+  favicon:"fa fa-download",
+  active:styles.activeLink
+},{
+  name:"Gallery",
+  to:"/gallery",
+  favicon:"fa fa-picture-o",
+  active:styles.activeLink
+},{
+  name:"Contact Us",
+  to:"/contact",
+  favicon:"fa fa-envelope",
+  active:styles.activeLink
+}];
+
+
 
 const navList = navArray.map((navItem)=>{
   return (
     <li className={navItem.top} key={navItem.name}>
-      <Link className="route-link" to={navItem.to} style={styles.link}>
+      <Link className="route-link" to={navItem.to} style={styles.link} activeStyle={navItem.active}>
         <span className="sidebar-nav-icon"><i className={navItem.favicon}></i></span>{navItem.name}
       </Link>
     </li>

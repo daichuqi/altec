@@ -24829,6 +24829,19 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var styles = {};
+	styles.link = {
+	  display: "block",
+	  padding: "10px 25px",
+	  position: "relative",
+	  transition: "color .25s ease",
+	  transition: "left 0.5s ease, width 0.5s ease"
+	};
+	styles.activeLink = {
+	  color: "#28c",
+	  width: '244px',
+	  left: '6px'
+	};
+
 	var navArray = [{
 	  name: "Home",
 	  to: "/",
@@ -24837,38 +24850,29 @@
 	}, {
 	  name: "Product List",
 	  to: "/products",
-	  favicon: "fa fa-cube"
+	  favicon: "fa fa-cube",
+	  active: styles.activeLink
 	}, {
 	  name: "Applications",
 	  to: "/applications",
-	  favicon: "fa fa-cog"
+	  favicon: "fa fa-cog",
+	  active: styles.activeLink
 	}, {
 	  name: "Manual Download",
-	  to: "/",
-	  favicon: "fa fa-download"
+	  to: "/download",
+	  favicon: "fa fa-download",
+	  active: styles.activeLink
 	}, {
 	  name: "Gallery",
 	  to: "/gallery",
-	  favicon: "fa fa-picture-o"
+	  favicon: "fa fa-picture-o",
+	  active: styles.activeLink
 	}, {
 	  name: "Contact Us",
 	  to: "/contact",
-	  favicon: "fa fa-envelope"
+	  favicon: "fa fa-envelope",
+	  active: styles.activeLink
 	}];
-
-	styles.link = {
-	  display: "block",
-	  padding: "10px 25px",
-	  position: "relative",
-	  transition: "color .25s ease",
-	  transition: "left 0.5s ease, width 0.5s ease"
-	};
-
-	styles.activeLink = {
-	  color: "#28c",
-	  width: '244px',
-	  left: '6px'
-	};
 
 	var navList = navArray.map(function (navItem) {
 	  return _react2.default.createElement(
@@ -24876,7 +24880,7 @@
 	    { className: navItem.top, key: navItem.name },
 	    _react2.default.createElement(
 	      _reactRouter.Link,
-	      { className: 'route-link', to: navItem.to, style: styles.link },
+	      { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
 	      _react2.default.createElement(
 	        'span',
 	        { className: 'sidebar-nav-icon' },
