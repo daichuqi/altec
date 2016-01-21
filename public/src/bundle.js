@@ -25044,7 +25044,7 @@
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25057,12 +25057,35 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Products = _react2.default.createClass({
-	  displayName: 'Products',
+	  displayName: "Products",
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'div',
+	      "div",
 	      null,
-	      'products'
+	      _react2.default.createElement(
+	        "div",
+	        { className: "pd-title" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "pd-title-text" },
+	          "CULTURE OF PRODUCT",
+	          _react2.default.createElement(
+	            "span",
+	            { className: "pd-title-span" },
+	            " EXCELLENCE"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "pd-title-text" },
+	          "AND TECHOLOGY",
+	          _react2.default.createElement(
+	            "span",
+	            { className: "pd-title-span" },
+	            " INNOVATION"
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
