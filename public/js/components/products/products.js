@@ -1,19 +1,6 @@
 import React,{Component} from 'react'
 import ProductList from './components/product-list'
-
-const category = [{
-  name:"Temperature Controllers"
-},{
-  name:"Tension Controllers"
-},{
-  name:"Pressure Controllers"
-},{
-  name:"Humidity Controllers"
-},{
-  name:"Temp. Differential Controllers"
-},{
-  name:"PH/ORP Controllers"
-}]
+import {category} from './components/product-data'
 
 const CategoryList = category.map((item)=>{
     return (

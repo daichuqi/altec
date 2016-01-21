@@ -67,21 +67,21 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _contact = __webpack_require__(224);
+	var _contact = __webpack_require__(225);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
 	var _products = __webpack_require__(221);
 
-	var _gallery = __webpack_require__(225);
+	var _gallery = __webpack_require__(226);
 
 	var _gallery2 = _interopRequireDefault(_gallery);
 
-	var _download = __webpack_require__(226);
+	var _download = __webpack_require__(227);
 
 	var _download2 = _interopRequireDefault(_download);
 
-	var _applications = __webpack_require__(227);
+	var _applications = __webpack_require__(228);
 
 	var _applications2 = _interopRequireDefault(_applications);
 
@@ -25054,6 +25054,8 @@
 
 	var _productList2 = _interopRequireDefault(_productList);
 
+	var _productData = __webpack_require__(224);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25062,21 +25064,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var category = [{
-	  name: "Temperature Controllers"
-	}, {
-	  name: "Tension Controllers"
-	}, {
-	  name: "Pressure Controllers"
-	}, {
-	  name: "Humidity Controllers"
-	}, {
-	  name: "Temp. Differential Controllers"
-	}, {
-	  name: "PH/ORP Controllers"
-	}];
-
-	var CategoryList = category.map(function (item) {
+	var CategoryList = _productData.category.map(function (item) {
 	  return _react2.default.createElement(
 	    'div',
 	    { key: item.name },
@@ -25181,7 +25169,7 @@
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25191,6 +25179,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _productData = __webpack_require__(224);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var ProductListItem = function ProductListItem(_ref) {
@@ -25199,21 +25189,49 @@
 	  var productId = product.id;
 	  if (!product) {
 	    return _react2.default.createElement(
-	      "div",
+	      'div',
 	      null,
-	      "Loading..."
+	      'Loading...'
 	    );
 	  }
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "col-md-12" },
-	    product.name
+	    'div',
+	    { className: 'col-md-12' },
+	    product.name,
+	    _productData.test.name
 	  );
 	};
 	exports.default = ProductListItem;
 
 /***/ },
 /* 224 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var test = exports.test = {
+	  "name": "abc"
+	};
+
+	var category = exports.category = [{
+	  name: "Temperature Controllers"
+	}, {
+	  name: "Tension Controllers"
+	}, {
+	  name: "Pressure Controllers"
+	}, {
+	  name: "Humidity Controllers"
+	}, {
+	  name: "Temp. Differential Controllers"
+	}, {
+	  name: "PH/ORP Controllers"
+	}];
+
+/***/ },
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25242,7 +25260,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 225 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25271,7 +25289,7 @@
 	exports.default = Gallery;
 
 /***/ },
-/* 226 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25300,7 +25318,7 @@
 	exports.default = Download;
 
 /***/ },
-/* 227 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

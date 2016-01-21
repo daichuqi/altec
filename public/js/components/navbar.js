@@ -77,6 +77,7 @@ class ProductNav extends React.Component{
         <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
           <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
         </Link>
+
         <div className={listChecker ? "openList NavPdList" : "closeList NavPdList"}>
           {CategoryList}
         </div>

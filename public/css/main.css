@@ -70,16 +70,14 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .sidebar-nav-wrapper {
-  border-bottom: 1px solid #dae0e7;
-}
-
-.sidebar-nav-wrapper {
     position: absolute;
     top: 150px;
     bottom: 60px;
     left: 0;
     right: 0;
     width: 100%;
+    border-bottom: 1px solid #dae0e7;
+    border-top: 1px solid #dae0e7;
 }
 .sidebar-nav-icon {
     display: inline-block;
