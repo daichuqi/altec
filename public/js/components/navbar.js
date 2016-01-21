@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import {CategoryList} from './products/products'
 
 const styles = {};
 styles.link = {
@@ -15,7 +16,19 @@ styles.activeLink = {
   left:'6px'
 }
 
-const navArray = [{
+
+var listChecker = false;
+var openList = function(){
+  console.log('list click');
+  console.log(listChecker);
+  if(listChecker){
+    listChecker = false
+  }else{
+    listChecker = true
+  }
+}
+
+var navArray = [{
   name:"Home",
   to:"/",
   favicon:"fa fa-home",
@@ -24,7 +37,9 @@ const navArray = [{
   name:"Product List",
   to:"/products",
   favicon:"fa fa-cube",
-  active:styles.activeLink
+  active:styles.activeLink,
+  onclick:openList,
+  open:false
 },{
   name:"Applications",
   to:"/applications",
@@ -49,14 +64,35 @@ const navArray = [{
 
 
 
+class ProductNav extends React.Component{
+  constructor(props) {
+    super(props)
+  }
+  render(){
+    return(
+      <li key="Product List" onClick={openList}>
+        <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
+          <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
+        </Link>
+        <div className={listChecker ? "openList NavPdList" : "closeList NavPdList"}>
+          {CategoryList}
+        </div>
+      </li>
+    )
+  }
+}
+
 const navList = navArray.map((navItem)=>{
-  return (
+  if(navItem.name === "Product List"){
+    return <ProductNav />
+  }else{
+    return (
     <li className={navItem.top} key={navItem.name}>
       <Link className="route-link" to={navItem.to} style={styles.link} activeStyle={navItem.active}>
         <span className="sidebar-nav-icon"><i className={navItem.favicon}></i></span>{navItem.name}
       </Link>
     </li>
-  )
+  )}
 });
 
 class Navbar extends React.Component {

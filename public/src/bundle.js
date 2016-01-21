@@ -67,13 +67,11 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _contact = __webpack_require__(221);
+	var _contact = __webpack_require__(222);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
-	var _products = __webpack_require__(222);
-
-	var _products2 = _interopRequireDefault(_products);
+	var _products = __webpack_require__(221);
 
 	var _gallery = __webpack_require__(223);
 
@@ -97,7 +95,7 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _layout2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _products.Products }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'applications', component: _applications2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'download', component: _download2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'gallery', component: _gallery2.default }),
@@ -24820,6 +24818,8 @@
 
 	var _reactRouter = __webpack_require__(160);
 
+	var _products = __webpack_require__(221);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24842,6 +24842,17 @@
 	  left: '6px'
 	};
 
+	var listChecker = false;
+	var openList = function openList() {
+	  console.log('list click');
+	  console.log(listChecker);
+	  if (listChecker) {
+	    listChecker = false;
+	  } else {
+	    listChecker = true;
+	  }
+	};
+
 	var navArray = [{
 	  name: "Home",
 	  to: "/",
@@ -24851,7 +24862,9 @@
 	  name: "Product List",
 	  to: "/products",
 	  favicon: "fa fa-cube",
-	  active: styles.activeLink
+	  active: styles.activeLink,
+	  onclick: openList,
+	  open: false
 	}, {
 	  name: "Applications",
 	  to: "/applications",
@@ -24874,25 +24887,66 @@
 	  active: styles.activeLink
 	}];
 
+	var ProductNav = function (_React$Component) {
+	  _inherits(ProductNav, _React$Component);
+
+	  function ProductNav(props) {
+	    _classCallCheck(this, ProductNav);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(ProductNav).call(this, props));
+	  }
+
+	  _createClass(ProductNav, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'li',
+	        { key: 'Product List', onClick: openList },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'sidebar-nav-icon' },
+	            _react2.default.createElement('i', { className: 'fa fa-cube' })
+	          ),
+	          'Product List'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: listChecker ? "openList" : "closeList" },
+	          _products.CategoryList
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ProductNav;
+	}(_react2.default.Component);
+
 	var navList = navArray.map(function (navItem) {
-	  return _react2.default.createElement(
-	    'li',
-	    { className: navItem.top, key: navItem.name },
-	    _react2.default.createElement(
-	      _reactRouter.Link,
-	      { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
+	  if (navItem.name === "Product List") {
+	    return _react2.default.createElement(ProductNav, null);
+	  } else {
+	    return _react2.default.createElement(
+	      'li',
+	      { className: navItem.top, key: navItem.name },
 	      _react2.default.createElement(
-	        'span',
-	        { className: 'sidebar-nav-icon' },
-	        _react2.default.createElement('i', { className: navItem.favicon })
-	      ),
-	      navItem.name
-	    )
-	  );
+	        _reactRouter.Link,
+	        { className: 'route-link', to: navItem.to, style: styles.link, activeStyle: navItem.active },
+	        _react2.default.createElement(
+	          'span',
+	          { className: 'sidebar-nav-icon' },
+	          _react2.default.createElement('i', { className: navItem.favicon })
+	        ),
+	        navItem.name
+	      )
+	    );
+	  }
 	});
 
-	var Navbar = function (_React$Component) {
-	  _inherits(Navbar, _React$Component);
+	var Navbar = function (_React$Component2) {
+	  _inherits(Navbar, _React$Component2);
 
 	  function Navbar(props) {
 	    _classCallCheck(this, Navbar);
@@ -24980,46 +25034,40 @@
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Contact = _react2.default.createClass({
-	  displayName: 'Contact',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'Contact'
-	    );
-	  }
-	});
-
-	exports.default = Contact;
-
-/***/ },
-/* 222 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.CategoryList = exports.Products = undefined;
 
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var category = [{
+	  name: "Temperature Controllers"
+	}, {
+	  name: "Tension Controllers"
+	}, {
+	  name: "Pressure Controllers"
+	}, {
+	  name: "Humidity Controllers"
+	}, {
+	  name: "Temp. Differential Controllers"
+	}, {
+	  name: "PH/ORP Controllers"
+	}];
+
+	var CategoryList = category.map(function (item) {
+	  return _react2.default.createElement(
+	    "div",
+	    { key: item.name },
+	    item.name
+	  );
+	});
 
 	var Products = _react2.default.createClass({
 	  displayName: "Products",
@@ -25050,12 +25098,43 @@
 	            " INNOVATION"
 	          )
 	        )
-	      )
+	      ),
+	      _react2.default.createElement("div", { className: "pd-category" })
 	    );
 	  }
 	});
 
-	exports.default = Products;
+	exports.Products = Products;
+	exports.CategoryList = CategoryList;
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Contact = _react2.default.createClass({
+	  displayName: 'Contact',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      'Contact'
+	    );
+	  }
+	});
+
+	exports.default = Contact;
 
 /***/ },
 /* 223 */
