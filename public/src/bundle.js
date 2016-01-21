@@ -24834,13 +24834,16 @@
 
 	styles.link = {
 	  display: "block",
-	  padding: "10px 20px",
+	  padding: "10px 25px",
 	  position: "relative",
-	  transition: "color .25s ease"
+	  transition: "color .25s ease",
+	  transition: "left 0.5s ease, width 0.5s ease"
 	};
 
 	styles.activeLink = {
-	  color: "#28c"
+	  color: "#28c",
+	  width: '244px',
+	  left: '6px'
 	};
 
 	var Navbar = function (_React$Component) {
@@ -24879,7 +24882,7 @@
 	                  'a',
 	                  { href: '#' },
 	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
-	                  'Website'
+	                  'English'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -24889,7 +24892,7 @@
 	                  'a',
 	                  { href: '#' },
 	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
-	                  'Github'
+	                  '中文'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -24910,7 +24913,7 @@
 	          { className: 'sidebar-nav-wrapper js-custom-scrollbar' },
 	          _react2.default.createElement(
 	            'ul',
-	            { className: 'sidebar-nav js-one-page-nav js-menu-vertical' },
+	            { className: 'sidebar-nav js-one-page-nav js-menu-vertical', id: 'navBar' },
 	            _react2.default.createElement(
 	              'li',
 	              { className: 'addbordertop' },
@@ -24936,7 +24939,7 @@
 	                  { className: 'sidebar-nav-icon' },
 	                  _react2.default.createElement('i', { className: 'fa fa-cube' })
 	                ),
-	                'Products'
+	                'Product List'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -24964,7 +24967,7 @@
 	                  { className: 'sidebar-nav-icon' },
 	                  _react2.default.createElement('i', { className: 'fa fa-download' })
 	                ),
-	                'Download'
+	                'Manual Download'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -24992,7 +24995,7 @@
 	                  { className: 'sidebar-nav-icon' },
 	                  _react2.default.createElement('i', { className: 'fa fa-envelope' })
 	                ),
-	                'Contact'
+	                'Contact Us'
 	              )
 	            )
 	          )

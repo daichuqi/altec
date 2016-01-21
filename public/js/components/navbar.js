@@ -7,13 +7,16 @@ const styles = {}
 
 styles.link = {
   display: "block",
-  padding: "10px 20px",
+  padding: "10px 25px",
   position: "relative",
   transition: "color .25s ease",
+  transition: "left 0.5s ease, width 0.5s ease",
 }
 
 styles.activeLink = {
-  color: "#28c"
+  color: "#28c",
+  width: '244px',
+  left:'6px',
 }
 
 
@@ -31,15 +34,15 @@ class Navbar extends React.Component {
           </div>
           <div className="sidebar-header-meta">
             <ul className="sidebar-header-meta-list">
-            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Website</a></li>
-            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Github</a></li>
+            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>English</a></li>
+            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>中文</a></li>
             <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Support</a></li>
             </ul>
           </div>
         </div>
 
         <div className="sidebar-nav-wrapper js-custom-scrollbar">
-          <ul className="sidebar-nav js-one-page-nav js-menu-vertical">
+          <ul className="sidebar-nav js-one-page-nav js-menu-vertical" id="navBar">
             <li className="addbordertop">
               <Link className="route-link" to="/" style={styles.link}>
                 <span className="sidebar-nav-icon"><i className="fa fa-home"></i></span>Home
@@ -47,7 +50,7 @@ class Navbar extends React.Component {
             </li>
             <li>
               <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Products
+                <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
               </Link>
             </li>
             <li>
@@ -57,7 +60,7 @@ class Navbar extends React.Component {
             </li>
             <li>
               <Link className="route-link" to="/download" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-download"></i></span>Download
+                <span className="sidebar-nav-icon"><i className="fa fa-download"></i></span>Manual Download
               </Link>
             </li>
             <li>
@@ -67,7 +70,7 @@ class Navbar extends React.Component {
             </li>
             <li>
               <Link className="route-link" to="/contact" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-envelope"></i></span>Contact
+                <span className="sidebar-nav-icon"><i className="fa fa-envelope"></i></span>Contact Us
               </Link>
             </li>
           </ul>

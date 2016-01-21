@@ -26,7 +26,6 @@ a:link, a:visited,a:hover,a:active  {
   position: fixed;
   height: 100%;
   width: 250px;
-  background-color: rgba(245, 245, 245, 0.44);
   box-shadow: 0 0 4px 1px #ECECEC;
   z-index: 99;
 }
@@ -90,9 +89,9 @@ a:link, a:visited,a:hover,a:active  {
     vertical-align: middle;
     zoom: 1;
     width: 12px;
-    margin-right: 10px;
+    margin-right: 15px;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .route-link:hover{
@@ -100,7 +99,7 @@ a:link, a:visited,a:hover,a:active  {
 }
 
 .route-link{
-  font-size: 13px;
+  font-size: 14px;
   color: #4e5154;
 }
 
@@ -112,6 +111,7 @@ a:link, a:visited,a:hover,a:active  {
     list-style-type: none;
     font-weight: 300;
     z-index: 98;
+    background-color: #28c;
 }
 
 .addbordertop {
@@ -196,6 +196,16 @@ a:link, a:visited,a:hover,a:active  {
 }
 span.pd-title-span {
     color: #22A0FF;
+}
+
+.route-link{
+  width: 250px;
+  left:0;
+  background-color: #F8F8F8;
+}
+.route-link:hover{
+  width: 244px;
+  left:6px;
 }
 
 
