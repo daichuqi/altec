@@ -24828,9 +24828,33 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var dark = 'hsl(200, 20%, 20%)';
-	var light = '#fff';
 	var styles = {};
+	var navArray = [{
+	  name: "Home",
+	  to: "/",
+	  favicon: "fa fa-home",
+	  top: "addbordertop"
+	}, {
+	  name: "Product List",
+	  to: "/products",
+	  favicon: "fa fa-cube"
+	}, {
+	  name: "Applications",
+	  to: "/applications",
+	  favicon: "fa fa-cog"
+	}, {
+	  name: "Manual Download",
+	  to: "/",
+	  favicon: "fa fa-download"
+	}, {
+	  name: "Gallery",
+	  to: "/gallery",
+	  favicon: "fa fa-picture-o"
+	}, {
+	  name: "Contact Us",
+	  to: "/contact",
+	  favicon: "fa fa-envelope"
+	}];
 
 	styles.link = {
 	  display: "block",
@@ -24845,6 +24869,23 @@
 	  width: '244px',
 	  left: '6px'
 	};
+
+	var navList = navArray.map(function (navItem) {
+	  return _react2.default.createElement(
+	    'li',
+	    { className: navItem.top, key: navItem.name },
+	    _react2.default.createElement(
+	      _reactRouter.Link,
+	      { className: 'route-link', to: navItem.to, style: styles.link },
+	      _react2.default.createElement(
+	        'span',
+	        { className: 'sidebar-nav-icon' },
+	        _react2.default.createElement('i', { className: navItem.favicon })
+	      ),
+	      navItem.name
+	    )
+	  );
+	});
 
 	var Navbar = function (_React$Component) {
 	  _inherits(Navbar, _React$Component);
@@ -24914,90 +24955,7 @@
 	          _react2.default.createElement(
 	            'ul',
 	            { className: 'sidebar-nav js-one-page-nav js-menu-vertical', id: 'navBar' },
-	            _react2.default.createElement(
-	              'li',
-	              { className: 'addbordertop' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/', style: styles.link },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-home' })
-	                ),
-	                'Home'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/products', style: styles.link, activeStyle: styles.activeLink },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-cube' })
-	                ),
-	                'Product List'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/applications', style: styles.link, activeStyle: styles.activeLink },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-cog' })
-	                ),
-	                'Applications'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/download', style: styles.link, activeStyle: styles.activeLink },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-download' })
-	                ),
-	                'Manual Download'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/gallery', style: styles.link, activeStyle: styles.activeLink },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-picture-o' })
-	                ),
-	                'Gallery'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { className: 'route-link', to: '/contact', style: styles.link, activeStyle: styles.activeLink },
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sidebar-nav-icon' },
-	                  _react2.default.createElement('i', { className: 'fa fa-envelope' })
-	                ),
-	                'Contact Us'
-	              )
-	            )
+	            navList
 	          )
 	        ),
 	        _react2.default.createElement(

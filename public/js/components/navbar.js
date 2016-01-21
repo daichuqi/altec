@@ -1,9 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const dark = 'hsl(200, 20%, 20%)'
-const light = '#fff'
-const styles = {}
+const styles = {};
+const navArray = [{
+  name:"Home",
+  to:"/",
+  favicon:"fa fa-home",
+  top:"addbordertop"
+},{
+  name:"Product List",
+  to:"/products",
+  favicon:"fa fa-cube"
+},{
+  name:"Applications",
+  to:"/applications",
+  favicon:"fa fa-cog"
+},{
+  name:"Manual Download",
+  to:"/",
+  favicon:"fa fa-download"
+},{
+  name:"Gallery",
+  to:"/gallery",
+  favicon:"fa fa-picture-o"
+},{
+  name:"Contact Us",
+  to:"/contact",
+  favicon:"fa fa-envelope"
+}];
 
 styles.link = {
   display: "block",
@@ -13,18 +37,28 @@ styles.link = {
   transition: "left 0.5s ease, width 0.5s ease",
 }
 
+
 styles.activeLink = {
   color: "#28c",
   width: '244px',
-  left:'6px',
+  left:'6px'
 }
 
+
+const navList = navArray.map((navItem)=>{
+  return (
+    <li className={navItem.top} key={navItem.name}>
+      <Link className="route-link" to={navItem.to} style={styles.link}>
+        <span className="sidebar-nav-icon"><i className={navItem.favicon}></i></span>{navItem.name}
+      </Link>
+    </li>
+  )
+});
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props)
   }
-
   render() {
     return (
       <div className="sidebar">
@@ -40,42 +74,11 @@ class Navbar extends React.Component {
             </ul>
           </div>
         </div>
-
         <div className="sidebar-nav-wrapper js-custom-scrollbar">
           <ul className="sidebar-nav js-one-page-nav js-menu-vertical" id="navBar">
-            <li className="addbordertop">
-              <Link className="route-link" to="/" style={styles.link}>
-                <span className="sidebar-nav-icon"><i className="fa fa-home"></i></span>Home
-              </Link>
-            </li>
-            <li>
-              <Link className="route-link" to="/products" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-cube"></i></span>Product List
-              </Link>
-            </li>
-            <li>
-              <Link className="route-link" to="/applications" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-cog"></i></span>Applications
-              </Link>
-            </li>
-            <li>
-              <Link className="route-link" to="/download" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-download"></i></span>Manual Download
-              </Link>
-            </li>
-            <li>
-              <Link className="route-link" to="/gallery" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-picture-o"></i></span>Gallery
-              </Link>
-            </li>
-            <li>
-              <Link className="route-link" to="/contact" style={styles.link} activeStyle={styles.activeLink}>
-                <span className="sidebar-nav-icon"><i className="fa fa-envelope"></i></span>Contact Us
-              </Link>
-            </li>
+            {navList}
           </ul>
         </div>
-
         <div className="sidebar-footer">
           Shenzhen ALTEC Electronics Co., Ltd.
         </div>
