@@ -7,12 +7,12 @@ const ProductListItem = ({product}) =>{
     return <div>Loading...</div>
   }
   return (
-    <Row className="show-grid">
-      <Col xs={12} md={4}>
-        <img src="./images/logo.png" />
+    <Row className="pd-list-item">
+      <Col xs={4}>
+        <img className="pd-list-img" src={product.img} />
       </Col>
-      <Col xs={12} md={8}>
-        <div>hello</div>
+      <Col xs={8}>
+        <div className="pd-list-name">{product.name}</div>
       </Col>
     </Row>
   )

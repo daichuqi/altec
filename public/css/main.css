@@ -17,6 +17,10 @@ a:link, a:visited,a:hover,a:active  {
   width: 60%;
 }
 
+.row{
+  margin: 0
+}
+
 /*========= NavBar =============*/
 
 .sidebar{
@@ -135,7 +139,6 @@ a:link, a:visited,a:hover,a:active  {
 
 .sidecontent {
     padding-left: 250px;
-    position: fixed;
     height: 100%;
     width: 100%;
     z-index: 3;
@@ -231,6 +234,21 @@ span.pd-title-span {
     color: #22A0FF;
 }
 
+.pd-list-img{
+  width: 100%;
+  min-width: 200px;
+}
+
+.pd-list-item{
+  min-width: 700px;
+  margin-top:20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
 
 
 

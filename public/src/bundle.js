@@ -24948,16 +24948,6 @@
 	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
 	                  '中文'
 	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: '#' },
-	                  _react2.default.createElement('i', { className: 'sidebar-header-meta-list-icon fa fa-link' }),
-	                  'Support'
-	                )
 	              )
 	            )
 	          )
@@ -25033,7 +25023,7 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Products).call(this, props));
 
 	    _this.state = {
-	      products: [{ name: "al808", id: 1 }, { name: "tc818", id: 2 }]
+	      products: _productData.TempCtrlList
 	    };
 	    return _this;
 	  }
@@ -25107,11 +25097,11 @@
 
 	var ProductList = function ProductList(props) {
 	  var productItems = props.products.map(function (product) {
-	    return _react2.default.createElement(_productListItem2.default, { key: product.id, product: product });
+	    return _react2.default.createElement(_productListItem2.default, { key: product.name, product: product });
 	  });
 
 	  return _react2.default.createElement(
-	    _reactBootstrap.Grid,
+	    'div',
 	    null,
 	    productItems
 	  );
@@ -25150,19 +25140,19 @@
 	  }
 	  return _react2.default.createElement(
 	    _reactBootstrap.Row,
-	    { className: 'show-grid' },
+	    { className: 'pd-list-item' },
 	    _react2.default.createElement(
 	      _reactBootstrap.Col,
-	      { xs: 12, md: 4 },
-	      _react2.default.createElement('img', { src: './images/logo.png' })
+	      { xs: 4 },
+	      _react2.default.createElement('img', { className: 'pd-list-img', src: product.img })
 	    ),
 	    _react2.default.createElement(
 	      _reactBootstrap.Col,
-	      { xs: 12, md: 8 },
+	      { xs: 8 },
 	      _react2.default.createElement(
 	        'div',
-	        null,
-	        'hello'
+	        { className: 'pd-list-name' },
+	        product.name
 	      )
 	    )
 	  );
@@ -42154,20 +42144,71 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	var category = exports.category = [{
-	  name: "Temperature Controllers"
+		name: "Temperature Controllers"
 	}, {
-	  name: "Tension Controllers"
+		name: "Tension Controllers"
 	}, {
-	  name: "Pressure Controllers"
+		name: "Pressure Controllers"
 	}, {
-	  name: "Humidity Controllers"
+		name: "Humidity Controllers"
 	}, {
-	  name: "Temp. Differential Controllers"
+		name: "Temp. Differential Controllers"
 	}, {
-	  name: "PH/ORP Controllers"
+		name: "PH/ORP Controllers"
+	}];
+
+	var TempCtrlList = exports.TempCtrlList = [{
+		name: "AL807 Temperature Controller",
+		img: "./images/products/AL807.jpg"
+	}, {
+		name: "AL808 Temperature Controller",
+		img: "./images/products/AL808.jpg"
+	}, {
+		name: "AL810 Temperature Controller",
+		img: "./images/products/AL810.jpg"
+	}, {
+		name: "AL830 Temperature Controller",
+		img: "./images/products/AL830.jpg"
+	}, {
+		name: "PC900 Programmable Controller",
+		img: "./images/products/AL807.jpg"
+	}, {
+		name: "MTC35",
+		img: "./images/products/AL807.jpg"
+	}];
+
+	var TensCtrlList = exports.TensCtrlList = [{
+		name: "TC818",
+		img: "./images/products/AL807.jpg"
+	}, {
+		name: "TC950",
+		img: "./images/products/AL807.jpg"
+	}];
+
+	var PresCtrlList = exports.PresCtrlList = [{
+		name: "CPC316",
+		img: "./images/products/AL807.jpg"
+	}];
+
+	var HumiCtrlList = exports.HumiCtrlList = [{
+		name: "TH135",
+		img: "./images/products/TH136.jpg"
+	}, {
+		name: "TH136",
+		img: "./images/products/TH136.jpg"
+	}];
+
+	var TempDiffCtrlList = exports.TempDiffCtrlList = [{
+		name: "DC220",
+		img: "./images/products/DC220.jpg"
+	}];
+
+	var PHCtrlList = exports.PHCtrlList = [{
+		name: "pH/ORP800",
+		img: "./images/products/AL807.jpg"
 	}];
 
 /***/ },

@@ -62,7 +62,6 @@ class Navbar extends React.Component {
             <ul className="sidebar-header-meta-list">
             <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>English</a></li>
             <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>中文</a></li>
-            <li><a href="#"><i className="sidebar-header-meta-list-icon fa fa-link"/>Support</a></li>
             </ul>
           </div>
         </div>
