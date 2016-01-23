@@ -8,10 +8,10 @@ const ProductListItem = ({product}) =>{
   }
   return (
     <Row className="pd-list-item">
-      <Col xs={4}>
+      <Col xs={3}>
         <img className="pd-list-img" src={product.img} />
       </Col>
-      <Col xs={8}>
+      <Col xs={9}>
         <div className="pd-list-name">{product.name}</div>
       </Col>
     </Row>

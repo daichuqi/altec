@@ -25143,12 +25143,12 @@
 	    { className: 'pd-list-item' },
 	    _react2.default.createElement(
 	      _reactBootstrap.Col,
-	      { xs: 4 },
+	      { xs: 3 },
 	      _react2.default.createElement('img', { className: 'pd-list-img', src: product.img })
 	    ),
 	    _react2.default.createElement(
 	      _reactBootstrap.Col,
-	      { xs: 8 },
+	      { xs: 9 },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'pd-list-name' },
